@@ -142,22 +142,88 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  margin-bottom: 2%;
 }
 .main-container nav a {
   width: 10%;
 }
 .main-container .jumbo-head {
-  border: 2px solid black;
+  border: none;
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   background-color: lightgray;
+  align-items: center;
   align-content: space-around;
+  padding: 3%;
+}
+.main-container .jumbo-head hr {
+  width: 90%;
 }
 .main-container .jumbo-head img {
   width: 40%;
 }
 .main-container .jumbo-head h1 {
   font-size: 3em;
+  margin: 1% 0;
+}
+.main-container .jumbo-head h3 {
+  font-size: 1.3em;
+}
+.main-container .jumbo-head p {
+  margin: 1% 0;
+}
+.main-container .jumbo-head button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 1% 2%;
+  border-radius: 7%;
+}
+.main-container .about-skills {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  justify-content: space-around;
+  border: 2px solid black;
+}
+.main-container .about-skills #about {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: center;
+  background-color: lightgray;
+}
+.main-container .about-skills #about h2 {
+  margin: 2% 0;
+}
+.main-container .about-skills #about p {
+  margin: 3% 0;
+}
+.main-container .about-skills div {
+  border: 2px solid blue;
+  margin: 3% 0;
+}
+.main-container .about-skills div p {
+  font-size: 1.2em;
+}
+.main-container .about-skills div h2 {
+  font-size: 2em;
+}
+.main-container .about-skills div ul {
+  padding: 10%;
+}
+.main-container .about-skills div li {
+  border: 1px solid black;
+  font-size: 1.3em;
+  padding: 7% 10%;
+  width: 100%;
+}
+.main-container .about-skills div li:nth-child(2) {
+  background-color: lightgray;
+}
+.main-container .about-skills div li:nth-child(4) {
+  background-color: lightgray;
 }
