@@ -12,8 +12,7 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
+caption, article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
@@ -43,10 +42,7 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 
 /* Set every element's box-sizing to border-box */
 * {
@@ -54,6 +50,192 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
+
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap');
+
+@gray: lightgray;
+
+@font: 'ZCOOL QingKe HuangYou', cursive;
+
+.flex {
+	display: flex;
+	flex-direction: row;
+}
+
+.size {
+	width: 100%;
+	height: auto;
+}
+
+// main-container Section
+
+.main-container{
+	margin: 3%;
+
+	nav {
+		.flex();
+		width: 100%;
+		justify-content: flex-end;
+		margin-bottom: 2%;
+
+		a {
+			width: 10%;
+		}// Closes links
+	}// Closes nav
+
+// jumbo-head
+
+	.jumbo-head { 
+		.flex();
+		.size();
+		border: none;
+		flex-direction: column;
+		background-color: @gray;
+		align-items: center;
+		align-content: space-around;
+		padding: 3%;
+
+		hr {
+			width: 90%;
+		}// Closes hr
+		img {
+			width: 40%;
+		}// Closes img
+
+		h1 {
+			font-size: 3em;
+			margin: 1% 0;
+			font-family: @font;
+		}// Closes h1
+
+		h3 {
+			font-size: 1.3em;
+		}//Closes h3
+
+		p {
+			margin: 1% 0;
+		}// closes p
+
+		button {
+			background-color: green;
+			color: white;
+			border: none;
+			padding: 1% 2%;
+			border-radius: 7%;
+		}// Closes button
+	}// Closes .jumbo-head
+
+// About-Skills Section
+
+	.about-skills {
+		.size();
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+
+		#about {
+			display: flex;
+			flex-direction: column;
+			align-content: space-between;
+			align-items: center;
+			background-color: @gray;
+
+			h2 {
+				margin: 2% 0;
+				font-family: @font;
+			} // Closes h2 
+
+			p {
+				margin: 3% 0;
+			} // closes p
+		}//Closes about
+
+		div {
+			margin: 3% 0;
+
+			p {
+				font-size: 1.2em;
+			}// Closes p
+
+			h2 {
+				font-size: 2em;
+				font-family: @font;
+			}// Closes h2
+
+			ul {
+				padding: 10%;
+			}// Closes ul
+
+			li {
+				border: 1px solid @gray;
+				font-size: 1.3em;
+				padding: 7% 10%;
+				width: 100%;
+			}// Closes li
+
+			li:nth-child(2) {
+				background-color: @gray;
+			}
+
+			li:nth-child(4) {
+				background-color: @gray;
+			}
+		}// Closes div
+
+		@media(max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+		}
+	}// Closes .about-skills
+
+// Work History Section
+
+		#work {
+
+			h2 {
+				font-size: 2em;
+				margin: 2% 0;
+				font-family: @font;
+			}
+
+			table {
+				width: 100%;
+			}
+
+			tr {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			td {
+				display: flex;
+			}
+
+			#apple {
+				margin-left: 50px;
+			}
+
+			#micro {
+				margin-left: 55px;
+			}
+
+			#ama {
+				margin-left: 25px;
+			}
+
+			.gray {
+				background-color: @gray;
+			}
+		}
+// Footer Section
+
+		footer {
+			text-align: center;
+			margin: 2% 0;
+			background-color: lightseagreen;
+			padding: 3%;
+		}
+} // Closes .main-container
 
