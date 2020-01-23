@@ -55,14 +55,7 @@ fieldset,
 form,
 label,
 legend,
-table,
 caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
 article,
 aside,
 canvas,
@@ -122,10 +115,6 @@ q:after {
   content: '';
   content: none;
 }
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
@@ -134,13 +123,28 @@ html,
 body {
   height: 100%;
 }
+@font-face {
+  font-family: 'ZCOOL QingKe HuangYou';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('ZCOOL QingKe HuangYou Regular'), local('ZCOOLQingKeHuangYou-Regular'), url(https://fonts.gstatic.com/s/zcoolqingkehuangyou/v5/2Eb5L_R5IXJEWhD3AOhSvFC554MOOahI4mR4jPe4.ttf) format('truetype');
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+.size {
+  width: 100%;
+  height: auto;
+}
 .main-container {
   margin: 3%;
 }
 .main-container nav {
-  width: 100%;
   display: flex;
   flex-direction: row;
+  width: 100%;
   justify-content: flex-end;
   margin-bottom: 2%;
 }
@@ -148,10 +152,11 @@ body {
   width: 10%;
 }
 .main-container .jumbo-head {
-  border: none;
+  display: flex;
+  flex-direction: row;
   width: 100%;
   height: auto;
-  display: flex;
+  border: none;
   flex-direction: column;
   background-color: lightgray;
   align-items: center;
@@ -167,6 +172,7 @@ body {
 .main-container .jumbo-head h1 {
   font-size: 3em;
   margin: 1% 0;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
 .main-container .jumbo-head h3 {
   font-size: 1.3em;
@@ -182,12 +188,11 @@ body {
   border-radius: 7%;
 }
 .main-container .about-skills {
-  display: flex;
-  flex-direction: row;
   width: 100%;
   height: auto;
+  display: flex;
+  flex-direction: row;
   justify-content: space-around;
-  border: 2px solid black;
 }
 .main-container .about-skills #about {
   display: flex;
@@ -198,12 +203,12 @@ body {
 }
 .main-container .about-skills #about h2 {
   margin: 2% 0;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
 .main-container .about-skills #about p {
   margin: 3% 0;
 }
 .main-container .about-skills div {
-  border: 2px solid blue;
   margin: 3% 0;
 }
 .main-container .about-skills div p {
@@ -211,12 +216,13 @@ body {
 }
 .main-container .about-skills div h2 {
   font-size: 2em;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
 .main-container .about-skills div ul {
   padding: 10%;
 }
 .main-container .about-skills div li {
-  border: 1px solid black;
+  border: 1px solid lightgray;
   font-size: 1.3em;
   padding: 7% 10%;
   width: 100%;
@@ -226,4 +232,43 @@ body {
 }
 .main-container .about-skills div li:nth-child(4) {
   background-color: lightgray;
+}
+@media (max-width: 500px) {
+  .main-container .about-skills {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.main-container #work h2 {
+  font-size: 2em;
+  margin: 2% 0;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+.main-container #work table {
+  width: 100%;
+}
+.main-container #work tr {
+  display: flex;
+  justify-content: space-between;
+}
+.main-container #work td {
+  display: flex;
+}
+.main-container #work #apple {
+  margin-left: 50px;
+}
+.main-container #work #micro {
+  margin-left: 55px;
+}
+.main-container #work #ama {
+  margin-left: 25px;
+}
+.main-container #work .gray {
+  background-color: lightgray;
+}
+.main-container footer {
+  text-align: center;
+  margin: 2% 0;
+  background-color: lightseagreen;
+  padding: 3%;
 }
